@@ -17,6 +17,7 @@ start_time = datetime.now()
 
 parser = argparse.ArgumentParser()
 
+### 修改后的CATCC ##
 ######################## Model parameters ########################
 home_dir = os.getcwd()
 parser.add_argument('--experiment_description',     default='HAR_experiments',  type=str,   help='Experiment Description')
@@ -52,7 +53,6 @@ torch.backends.cudnn.deterministic = False
 torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 #####################################################
-
 
 experiment_log_dir = os.path.join(logs_save_dir, experiment_description, run_description,
                                   training_mode + f"_seed_{SEED}")
